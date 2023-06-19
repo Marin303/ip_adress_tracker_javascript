@@ -60,19 +60,26 @@ input {
     background-color: red;
 }
 
-.fetchData{
-    margin:40px auto;
+.fetchData {
+    margin: 40px auto;
     background-color: blue;
     width: 90%;
     height: 20vh;
     display: flex;
+    justify-content: space-between;
     padding: 20px;
     border-radius: 10px;
 }
 
-footer{
+footer {
     position: absolute;
     right: 50%;
     transform: translate(50%);
-    bottom:0px;
+    bottom: 0px;
+}
+
+/*new created innerHTML*/
+.fetchData p {
+    color: white;
+    font-size: 28px;
 }

@@ -15,7 +15,7 @@ input.addEventListener("keydown", (e) => {
   }
 });
 function fetchData() {
-  const apiKey = "";
+  const apiKey = "at_kUhn9ldzNBXS22twWB9jkfw6XNoZF";
   const ipAddress = input.value;
   fetch(
     `https://geo.ipify.org/api/v2/country?apiKey=${apiKey}&ipAddress=${ipAddress}`
@@ -29,8 +29,8 @@ function fetchData() {
 }
 
 function provideInfo(data) {
-  addressInfo.textContent = `IP ADRESS: ${data.ip}`;
-  locationInfo.textContent = `LOCATION: ${data.location.city}, ${data.location.region}, ${data.location.country}`;
-  timezoneInfo.textContent = `TIMEZONE: ${data.location.timezone}`;
-  ipsInfo.textContent = `ISP: ${data.isp}`;
+  addressInfo.innerHTML = `IP ADDRESS: <p> ${data.ip}</p>`;
+  locationInfo.innerHTML = `LOCATION:<p> ${data.location.city}, ${data.location.region}, ${data.location.country}</p>`;
+  timezoneInfo.innerHTML = `TIMEZONE: <p>${data.location.timezone}</p>`;
+  ipsInfo.innerHTML = `ISP: <p>${data.isp}</p>`;
 }
