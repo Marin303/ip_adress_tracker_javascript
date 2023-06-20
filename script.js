@@ -29,8 +29,8 @@ function fetchData() {
 }
 
 function provideInfo(data) {
-  addressInfo.innerHTML = `IP ADDRESS: <p> ${data.ip}</p>`;
-  locationInfo.innerHTML = `LOCATION:<p> ${data.location.city}, ${data.location.region}, ${data.location.country}</p>`;
-  timezoneInfo.innerHTML = `TIMEZONE: <p>${data.location.timezone}</p>`;
-  ipsInfo.innerHTML = `ISP: <p>${data.isp}</p>`;
+  addressInfo.innerHTML = `<span>IP ADDRESS</span><p>${data.ip}</p>`;
+  locationInfo.innerHTML = `<span>LOCATION</span><p>${data.location.city}, ${data.location.region}, ${data.location.country}</p>`;
+  timezoneInfo.innerHTML = `<span>TIMEZONE</span> <p>${data.location.timezone}</p>`;
+  ipsInfo.innerHTML = `<span>ISP</span><p>${data.isp}</p>`;
 }
