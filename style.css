@@ -16,12 +16,6 @@ h1 {
     font-weight: 400;
 }
 
-.attribution {
-    font-size: 11px;
-    text-align: center;
-    color: hsl(228, 45%, 44%);
-}
-
 header {
     padding-top: 30px;
     width: 100%;
@@ -37,15 +31,13 @@ header {
     border: none;
     border-radius: 0 5px 5px 0;
     padding: 10px;
-    height: 100%;
 }
 
 input {
     border: none;
     outline: none;
     padding: 10px;
-    flex: 1;
-    height: 100%;
+    flex: 1 0;
     border-radius: 5px 0 0 5px;
 }
 
@@ -56,20 +48,23 @@ input:focus {
 .inputAndbutton {
     margin: 20px auto;
     display: flex;
-    height: 40px;
     width: 40%;
+    justify-content: center;
 }
 
 .fetchData {
     margin: 40px auto;
-    background-color: blue;
+    background-color: white;
+    color: hsl(0, 0%, 17%);
     width: 90%;
     height: 20vh;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     text-align: left;
     padding: 50px;
     border-radius: 10px;
+    /* min-width: 400px; */
 }
 
 footer {
@@ -79,14 +74,46 @@ footer {
     bottom: 0px;
 }
 
+.fetchData span {
+    color: hsl(0, 0%, 59%);
+}
+
 .fetchData p {
-    color: white;
+    color: hsl(0, 0%, 17%);
     font-size: 28px;
 }
 
 .ips,
 .location,
 .timezone {
-    border-left: 1px solid red;
+    border-left: 1px solid hsl(0, 0%, 59%);
     padding-left: 40px;
+}
+
+.ips,
+.location,
+.timezone,
+.ipAdress {
+    margin: 10px;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (max-width:630px) {
+
+    .ips,
+    .location,
+    .timezone {
+        border: none;
+        padding: 0;
+    }
+
+    .fetchData {
+        justify-content: center;
+        text-align: center;
+    }
 }
