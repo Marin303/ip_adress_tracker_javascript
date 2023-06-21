@@ -18,7 +18,7 @@ function fetchData() {
   const apiKey = "at_kUhn9ldzNBXS22twWB9jkfw6XNoZF";
   const ipAddress = input.value;
   fetch(
-    `https://geo.ipify.org/api/v2/country?apiKey=${apiKey}&ipAddress=${ipAddress}`
+    `https://geo.ipify.org/api/v2/country,city?apiKey=${apiKey}&ipAddress=${ipAddress}`
   )
     .then((response) => response.json())
     .then((data) => {
@@ -34,14 +34,14 @@ function provideInfo(data) {
   timezoneInfo.innerHTML = `<span>TIMEZONE</span> <p>${data.location.timezone}</p>`;
   ipsInfo.innerHTML = `<span>ISP</span><p>${data.isp}</p>`;
 }
-let map = L.map("map").setView([51.505, -0.09], 13);
+let map = L.map("map").setView([45.81, 15.98], 13);
 L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
   maxZoom: 19,
   attribution:
     '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
 }).addTo(map);
-let marker = L.marker([51.5, -0.09]).addTo(map);
-let circle = L.circle([51.508, -0.11], {
+let marker = L.marker([45.81, 15.98]).addTo(map);
+let circle = L.circle([45.79, 15.95], {
   color: "red",
   fillColor: "#f03",
   fillOpacity: 0.5,
