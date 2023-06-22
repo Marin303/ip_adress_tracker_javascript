@@ -4,8 +4,11 @@ const timezoneInfo = document.querySelector(".timezone");
 const ipsInfo = document.querySelector(".ips");
 const input = document.querySelector("input");
 const button = document.querySelector("button");
+let map;
+let marker;
+let circle;
 
-/* 8.8.8.8 */
+initializeMap(45.81, 15.98);
 
 button.addEventListener("click", fetchData);
 input.addEventListener("keydown", (e) => {
@@ -14,6 +17,7 @@ input.addEventListener("keydown", (e) => {
     input.value = "";
   }
 });
+
 function fetchData() {
   const apiKey = "at_kUhn9ldzNBXS22twWB9jkfw6XNoZF";
   const ipAddress = input.value;
@@ -23,6 +27,7 @@ function fetchData() {
     .then((response) => response.json())
     .then((data) => {
       provideInfo(data);
+      updateMap(data.location.lat, data.location.lng);
       console.log(data);
     })
     .catch((err) => console.error(err));
@@ -34,16 +39,27 @@ function provideInfo(data) {
   timezoneInfo.innerHTML = `<span>TIMEZONE</span> <p>${data.location.timezone}</p>`;
   ipsInfo.innerHTML = `<span>ISP</span><p>${data.isp}</p>`;
 }
-let map = L.map("map").setView([45.81, 15.98], 13);
-L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-  maxZoom: 19,
-  attribution:
-    '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-}).addTo(map);
-let marker = L.marker([45.81, 15.98]).addTo(map);
-let circle = L.circle([45.79, 15.95], {
-  color: "red",
-  fillColor: "#f03",
-  fillOpacity: 0.5,
-  radius: 500,
-}).addTo(map);
+
+function initializeMap(lat, lng) {
+  map = L.map("map").setView([lat, lng], 13);
+  L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    maxZoom: 19,
+    attribution:
+      '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+  }).addTo(map);
+  marker = L.marker([lat, lng]).addTo(map);
+  circle = L.circle([lat, lng], {
+    color: "red",
+    fillColor: "#f03",
+    fillOpacity: 0.5,
+    radius: 500,
+  }).addTo(map);
+}
+
+function updateMap(lat, lng) {
+  marker.setLatLng([lat, lng]);
+  circle.setLatLng([lat, lng]);
+  map.setView([lat, lng], 13);
+}
+
+/*circle should have diffrent value than lat,lng*/
