@@ -2,4 +2,6 @@
 [LeafletJS](https://leafletjs.com/).
 
 
-### Api key expired
+```
+npm install parcel-bundler --save-dev
+```
