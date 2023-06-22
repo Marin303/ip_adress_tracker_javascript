@@ -2,7 +2,7 @@
 [LeafletJS - API](https://leafletjs.com/)
 
 ##
-[Preview deploy](ip-address-tracker-marin)
+[Preview deploy](https://ip-address-tracker-marin.netlify.app/)
 ##
 ```
 npm install parcel-bundler --save-dev
