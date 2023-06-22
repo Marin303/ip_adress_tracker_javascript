@@ -7,6 +7,7 @@ const button = document.querySelector("button");
 let map;
 let marker;
 let circle;
+const apiKey = process.env.API_KEY;
 
 initializeMap(45.81, 15.98);
 
@@ -19,7 +20,6 @@ input.addEventListener("keydown", (e) => {
 });
 
 function fetchData() {
-  const apiKey = process.env.API_KEY;
   const ipAddress = input.value;
   fetch(
     `https://geo.ipify.org/api/v2/country,city?apiKey=${apiKey}&ipAddress=${ipAddress}`

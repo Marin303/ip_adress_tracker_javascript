@@ -22,7 +22,7 @@ header {
     padding: 30px;
     width: 100%;
     height: 40vh;
-    background: url(./images/pattern-bg-desktop.png) no-repeat center / cover;
+    background: url(/pattern-bg-desktop.f65afe45.png) no-repeat center / cover;
 }
 
 .material-symbols-outlined {
@@ -160,3 +160,5 @@ footer {
         top: 50%;
     }
 }
+
+/*# sourceMappingURL=/style.e308ff8e.css.map */
