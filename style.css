@@ -70,12 +70,7 @@ input:focus {
     border-radius: 10px;
 }
 
-footer {
-    position: absolute;
-    right: 50%;
-    transform: translate(50%);
-    bottom: 0px;
-}
+
 
 .fetchData span {
     font-size: 11px;
@@ -103,6 +98,16 @@ footer {
     margin: 10px;
 }
 
+footer {
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    bottom: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 .attribution {
     background-color: rgba(255, 255, 255, 0.8);
     padding: 10px;
@@ -110,6 +115,7 @@ footer {
     font-size: 11px;
     text-align: center;
     color: hsl(228, 45%, 44%);
+
 }
 
 #map {
@@ -139,7 +145,8 @@ footer {
         font-size: smaller;
         font-weight: 600;
     }
-    h1{
+
+    h1 {
         font-size: 18px;
     }
 }
@@ -150,13 +157,15 @@ footer {
         margin: 0px auto;
     }
 
-    #map {
-        margin-top: 100px;
-    }
-    header{
+    header {
         height: 50vh;
     }
-    .fetchData{
+
+    .fetchData {
         top: 50%;
+    }
+
+    .attribution {
+        width: 100%;
     }
 }
