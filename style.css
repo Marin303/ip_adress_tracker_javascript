@@ -14,14 +14,12 @@ body {
 h1 {
     color: white;
     font-weight: 400;
-    max-width: 400px;
-    margin: auto;
 }
 
 header {
-    padding: 30px;
+    padding-top: 30px;
     width: 100%;
-    height: 40vh;
+    height: 30vh;
     background: url(./images/pattern-bg-desktop.png) no-repeat center / cover;
 }
 
@@ -38,9 +36,9 @@ header {
 input {
     border: none;
     outline: none;
-    padding: 15px;
+    padding: 10px;
     flex: 1 0;
-    border-radius: 10px 0 0 10px;
+    border-radius: 5px 0 0 5px;
 }
 
 input:focus {
@@ -51,15 +49,12 @@ input:focus {
 .inputAndbutton {
     margin: 20px auto;
     display: flex;
+    width: 40%;
     justify-content: center;
-    max-width: 500px;
 }
 
 .fetchData {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin: 100px auto;
     background-color: white;
     color: hsl(0, 0%, 17%);
     width: 90%;
@@ -70,7 +65,12 @@ input:focus {
     border-radius: 10px;
 }
 
-
+footer {
+    position: absolute;
+    right: 50%;
+    transform: translate(50%);
+    bottom: 0px;
+}
 
 .fetchData span {
     font-size: 11px;
@@ -81,7 +81,7 @@ input:focus {
 
 .fetchData p {
     color: hsl(0, 0%, 17%);
-    font-size: 18px;
+    font-size: 28px;
 }
 
 .ips,
@@ -98,16 +98,6 @@ input:focus {
     margin: 10px;
 }
 
-footer {
-    position: absolute;
-    right: 50%;
-    transform: translateX(50%);
-    bottom: 0px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
 .attribution {
     background-color: rgba(255, 255, 255, 0.8);
     padding: 10px;
@@ -115,7 +105,6 @@ footer {
     font-size: 11px;
     text-align: center;
     color: hsl(228, 45%, 44%);
-
 }
 
 #map {
@@ -145,27 +134,16 @@ footer {
         font-size: smaller;
         font-weight: 600;
     }
-
-    h1 {
-        font-size: 18px;
-    }
 }
 
 
 @media only screen and (max-width:360px) {
     .fetchData {
-        margin: 0px auto;
-    }
-
-    header {
-        height: 50vh;
-    }
-
-    .fetchData {
-        top: 50%;
-    }
-
-    .attribution {
+        margin: 10px auto;
         width: 100%;
+    }
+
+    #map {
+        margin-top: 100px;
     }
 }
