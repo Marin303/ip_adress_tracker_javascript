@@ -54,23 +54,21 @@ input:focus {
 }
 
 .fetchData {
-    margin: 100px auto;
+    display: flex;
+    justify-content: space-between;
+    margin: 0px auto;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: white;
     color: hsl(0, 0%, 17%);
     width: 90%;
-    display: flex;
-    justify-content: space-between;
     text-align: left;
-    padding: 20px;
+    padding: 10px;
     border-radius: 10px;
 }
 
-footer {
-    position: absolute;
-    right: 50%;
-    transform: translate(50%);
-    bottom: 0px;
-}
 
 .fetchData span {
     font-size: 11px;
@@ -81,7 +79,8 @@ footer {
 
 .fetchData p {
     color: hsl(0, 0%, 17%);
-    font-size: 28px;
+    font-size: 18px;
+    font-weight: 600;
 }
 
 .ips,
@@ -96,6 +95,13 @@ footer {
 .timezone,
 .ipAdress {
     margin: 10px;
+}
+
+footer {
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    bottom: 0px;
 }
 
 .attribution {
@@ -128,22 +134,22 @@ footer {
         justify-content: center;
         text-align: center;
         flex-wrap: wrap;
+        top: 40%;
     }
 
     .fetchData p {
         font-size: smaller;
-        font-weight: 600;
-    }
-}
-
-
-@media only screen and (max-width:360px) {
-    .fetchData {
-        margin: 10px auto;
-        width: 100%;
     }
 
-    #map {
-        margin-top: 100px;
+    h1 {
+        font-size: medium;
+    }
+
+    header {
+        height: 40vh;
+    }
+
+    footer {
+        width: 80%;
     }
 }
